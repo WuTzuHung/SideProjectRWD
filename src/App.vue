@@ -13,6 +13,7 @@ import Header from './components/Header.vue';
 </template>
 
 <style scoped lang="scss">
+
 .header {
   max-width: 100%;
   height: 15dvh;
@@ -27,4 +28,5 @@ import Header from './components/Header.vue';
 body{
   margin:0px;
 }
+
 </style>
