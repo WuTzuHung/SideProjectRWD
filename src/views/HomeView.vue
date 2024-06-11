@@ -21,10 +21,13 @@ export default {
 </script>
 
 <template>
+
   <div class="big"></div>
+  
 </template>
 
 <style>
+
 .big{
   width: 100%;
   height: 85dvh;
@@ -46,6 +49,5 @@ export default {
         background-color: green; /* 電腦上的背景顏色 */
     }
 }
-
 
 </style>
