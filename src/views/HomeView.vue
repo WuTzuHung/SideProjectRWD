@@ -23,7 +23,7 @@ export default {
 <template>
 
   <div class="big"></div>
-  
+
 </template>
 
 <style>
@@ -38,7 +38,7 @@ export default {
 @media (min-width: 768px) {
     /* iPad 或較小的桌面專用的 CSS */
     .big{
-  background-color: pink;
+  background-color:yellow;
 }
 }
 
