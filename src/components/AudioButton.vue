@@ -16,19 +16,62 @@ const props = defineProps({
     required: true
   }
 });
+// 定义一个ref来保存当前音频实例
+const currentAudio = ref(null);
+const audioDuration = ref(0); // 存储音频时长
+const isPlaying = ref(false); // 当前音频播放状态
 
 const playAudio = () => {
   const audioResource = props.audioResourceList.find(resource => resource.id === props.soundId);
   if (audioResource) {
-    const audio = new Audio(audioResource.src);
-    audio.volume = audioResource.volume;
-    audio.play();
+    // 如果当前有音频在播放，先停止它
+    if (currentAudio.value) {
+      currentAudio.value.pause();
+      currentAudio.value.currentTime = 0; // 重置音频
+    }
+
+    currentAudio.value = new Audio(audioResource.src);
+    currentAudio.value.volume = audioResource.volume;
+
+    // 检查音频时长
+    currentAudio.value.addEventListener('loadedmetadata', () => {
+      audioDuration.value = currentAudio.value.duration; // 更新音频时长
+      if (audioDuration.value <= 10) {
+        // 10秒以下的音频自动播放
+        currentAudio.value.play();
+        isPlaying.value = true; // 更新播放状态
+      }
+    });
+
+    // 播放音频
+    currentAudio.value.play(); // 确保在加载元数据之前先调用play
+    isPlaying.value = true; // 更新播放状态
+  }
+};
+
+const handleButtonClick = () => {
+  if (currentAudio.value) {
+    if (audioDuration.value > 10) {
+      // 如果音频时长超过10秒，点击时仅暂停
+      if (isPlaying.value) {
+        currentAudio.value.pause(); // 暂停音频
+      } else {
+        currentAudio.value.play(); // 播放音频
+      }
+      isPlaying.value = !isPlaying.value; // 切换播放状态
+    } else {
+      // 否则，调用playAudio
+      playAudio();
+    }
+  } else {
+    // 如果没有音频在播放，直接播放音频
+    playAudio();
   }
 };
 </script>
 
 <template>
-  <button @click="playAudio">{{ label }}</button>
+  <button @click="handleButtonClick">{{ label }}</button>
 </template>
 
 <style scoped>
