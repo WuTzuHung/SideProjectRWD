@@ -55,6 +55,7 @@ const handleButtonClick = () => {
       // 如果音频时长超过10秒，点击时仅暂停
       if (isPlaying.value) {
         currentAudio.value.pause(); // 暂停音频
+        currentAudio.value.currentTime = 0; // 重置音频
       } else {
         currentAudio.value.play(); // 播放音频
       }
