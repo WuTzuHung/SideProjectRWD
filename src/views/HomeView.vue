@@ -5,16 +5,16 @@ import AudioButton from '../components/AudioButton.vue'; // 导入 AudioButton
 const currentTab = ref('tab1');
 
 const audioResourceList = ref([
-    { id: 'sound1', src: 'public/sounds/TestSounds.mp3', volume: 1.0 },
-    { id: 'sound2', src: 'public/sounds/Test2.mp3', volume: 1.0 },
-    { id: 'sound3', src: 'public/sounds/a政經同學.mp3', volume: 1.0 },
-    { id: 'sound4', src: 'public/sounds/你這個妹控.mp3', volume: 1.0 },
-    { id: 'sound5', src: 'public/sounds/就是要親的才好.mp3', volume: 1.0 },
-    { id: 'sound6', src: 'public/sounds/從床底抓腳.mp3', volume: 1.0 },
-    { id: 'sound7', src: 'public/sounds/早安我的哥哥.mp3', volume: 1.0 },
-    { id: 'sound8', src: 'public/sounds/為什麼因為會起反應嗎.mp3', volume: 1.0 },
-    { id: 'sound9', src: 'public/sounds/男主久等了.mp3', volume: 1.0 },
-    { id: 'sound10', src: 'public/sounds/起床撲擊給我高興點.mp3', volume: 1.0 },
+    { id: 'sound1', src: '/sounds/TestSounds.mp3', volume: 1.0 },
+    { id: 'sound2', src: '/sounds/Test2.mp3', volume: 1.0 },
+    { id: 'sound3', src: '/sounds/a政經同學.mp3', volume: 1.0 },
+    { id: 'sound4', src: '/sounds/你這個妹控.mp3', volume: 1.0 },
+    { id: 'sound5', src: '/sounds/就是要親的才好.mp3', volume: 1.0 },
+    { id: 'sound6', src: '/sounds/從床底抓腳.mp3', volume: 1.0 },
+    { id: 'sound7', src: '/sounds/早安我的哥哥.mp3', volume: 1.0 },
+    { id: 'sound8', src: '/sounds/為什麼因為會起反應嗎.mp3', volume: 1.0 },
+    { id: 'sound9', src: '/sounds/男主久等了.mp3', volume: 1.0 },
+    { id: 'sound10', src: '/sounds/起床撲擊給我高興點.mp3', volume: 1.0 },
 
 ]);
 </script>
@@ -56,7 +56,7 @@ const audioResourceList = ref([
 
       </div>
     </div>
-    <img src="public/pictures/001.png" alt="" class="pic01">
+    <img src="/pictures/001.png" alt="" class="pic01">
   <!-- </div> -->
 
 </template>
