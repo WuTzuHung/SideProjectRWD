@@ -22,11 +22,11 @@ export default {
 <style scoped lang="scss">
 .headerShow {
     width: 100%;
-    height: 100%;
+    height: 15dvh;
     background-color: pink;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-content:center;
     letter-spacing: 2px;
 
     .routerItem {
@@ -36,7 +36,7 @@ export default {
 
     a {
         margin-right: 20px;
-        padding-top: 40px;
+        padding-top: 5dvh;
 
         &:hover {
             border-radius: 10px;

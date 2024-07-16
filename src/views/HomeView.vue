@@ -135,14 +135,16 @@ const audioResourceList = ref([
         background-color: red; 
     }
 
+    .tab-content{
+      min-height: 50dvh;
+  }
+
     .pic01{
     max-width: 40%; /* 限制最大寬度 */
     height: 50dvh;    /* 自動調整高度 */
   }
 
-  .tab-content{
-    height: 40dvh;
-  }
+  
 }
 
 </style>
