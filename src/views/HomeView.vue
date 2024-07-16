@@ -14,7 +14,8 @@ const audioResourceList = ref([
     { id: 'sound7', src: '/sounds/早安我的哥哥.mp3', volume: 1.0 },
     { id: 'sound8', src: '/sounds/為什麼因為會起反應嗎.mp3', volume: 1.0 },
     { id: 'sound9', src: '/sounds/男主久等了.mp3', volume: 1.0 },
-    { id: 'sound10', src: '/sounds/起床撲擊給我高興點.mp3', volume: 1.0 },
+    { id: 'sound10', src: '/sounds/真冷淡這時候要說久等了真是抱歉.mp3', volume: 1.0 },
+    { id: 'sound11', src: '/sounds/起床撲擊給我高興點.mp3', volume: 1.0 },
 
 ]);
 </script>
@@ -39,7 +40,9 @@ const audioResourceList = ref([
         <AudioButton soundId="sound7" label="早安我的哥哥" :audioResourceList="audioResourceList" />
         <AudioButton soundId="sound8" label="為什麼因為會起反應嗎" :audioResourceList="audioResourceList" />
         <AudioButton soundId="sound9" label="男主久等了" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="sound10" label="起床撲擊給我高興點" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="sound10" label="真冷淡這時候要說久等了真是抱歉" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="sound11" label="起床撲擊給我高興點" :audioResourceList="audioResourceList" />
+
         
 
       </div>
