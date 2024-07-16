@@ -84,7 +84,7 @@ const audioResourceList = ref([
   .tab-content {
     box-sizing: border-box; /* 包含內邊距與邊框 */
     width: 80%;
-    height: 90dvh;
+    height: 65dvh;
     padding: 0.1px;
     margin: 0%;
   /* border: 1px solid #121111;  */
@@ -94,7 +94,7 @@ const audioResourceList = ref([
 
 .pic01{
     max-width: 80%; /* 限制最大寬度 */
-    height: 45dvh;    /* 自動調整高度 */
+    height: 30dvh;    /* 自動調整高度 */
   }
 
 .tab1 {
