@@ -22,7 +22,7 @@ export default {
 <style scoped lang="scss">
 .headerShow {
     width: 100%;
-    height: 15dvh;
+    min-height: 15dvh;
     background-color: pink;
     display: flex;
     justify-content: center;

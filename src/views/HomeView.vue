@@ -77,6 +77,10 @@ const audioResourceList = ref([
   height: 85dvh;
   background-color: purple; */
 
+  /* .button{
+    height: 5dvh;
+  } */
+
   .currentTabContainer{
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 左右对齐 */
@@ -87,7 +91,7 @@ const audioResourceList = ref([
   .tab-content {
     box-sizing: border-box; /* 包含內邊距與邊框 */
     width: 80%;
-    height: 105dvh;
+    min-height: 105dvh;
     padding: 0.1px;
     margin: 0%;
   /* border: 1px solid #121111;  */
@@ -97,7 +101,7 @@ const audioResourceList = ref([
 
 .pic01{
     max-width: 80%; /* 限制最大寬度 */
-    height: 30dvh;    /* 自動調整高度 */
+    min-height: 30dvh;    /* 自動調整高度 */
   }
 
 .tab1 {
@@ -136,12 +140,12 @@ const audioResourceList = ref([
     }
 
     .tab-content{
-      height: 50dvh;
+      min-height: 50dvh;
   }
 
     .pic01{
     max-width: 40%; /* 限制最大寬度 */
-    height: 50dvh;    /* 自動調整高度 */
+    min-height: 50dvh;    /* 自動調整高度 */
   }
 
   
