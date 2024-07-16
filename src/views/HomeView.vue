@@ -1,33 +1,18 @@
-<script>
+<script setup>
 import { ref } from 'vue';
 import AudioButton from '../components/AudioButton.vue'; // 导入 AudioButton
+
 const currentTab = ref('tab1');
 
-export default {
-  name: 'MyComponent', // 组件的名称
-  setup() {
-    return {
-      currentTab,
-    };
-  },
-  data() {
-    return {
-     
-    };
-  },
-  methods: {
-    
-  },
-  computed: {
-    // 计算属性
-    
-  },
-  mounted() {
-    // 组件挂载后的钩子函数
-    
-  }
-};
+const audioResourceList = ref([
+    { id: 'sound1', src: '/sounds/TestSounds.mp3', volume: 1.0 },
+    { id: 'sound2', src: '/sounds/Test2.mp3', volume: 1.0 },
+    { id: 'sound3', src: '/sounds/TestSounds.mp3', volume: 1.0 },
+    { id: 'sound4', src: '/sounds/TestSounds.mp3', volume: 1.0 },
+]);
 </script>
+
+
 
 <template>
   <div class="tabs">
@@ -40,19 +25,19 @@ export default {
     <div class="currentTabContainer">
     <div v-if="currentTab === 'tab1'" class="tab-content tab1">
         <h2>Tab 1 Content</h2>
-        <AudioButton soundId="sound1" label="播放声音1" />
+        <AudioButton soundId="sound1" label="播放声音1" :audioResourceList="audioResourceList" />
       </div>
       <div v-if="currentTab === 'tab2'" class="tab-content tab2">
         <h2>Tab 2 Content</h2>
-        <AudioButton soundId="sound2" label="播放声音2" />
+        <AudioButton soundId="sound2" label="播放声音2" :audioResourceList="audioResourceList" />
       </div>
       <div v-if="currentTab === 'tab3'" class="tab-content tab3">
         <h2>Tab 3 Content</h2>
-        <AudioButton soundId="sound3" label="播放声音3" />
+        <AudioButton soundId="sound3" label="播放声音1" :audioResourceList="audioResourceList"  />
       </div>
       <div v-if="currentTab === 'tab4'" class="tab-content tab4">
         <h2>Tab 4 Content</h2>
-        <AudioButton soundId="sound4" label="播放声音4" />
+        <AudioButton soundId="sound4" label="播放声音1" :audioResourceList="audioResourceList" />
       </div>
     </div>
   <!-- </div> -->
@@ -74,7 +59,7 @@ export default {
 
   .currentTabContainer{
     display: flex; /* 使用 Flexbox */
-    justify-content: space-between; /* 左右对齐 */
+    justify-content: center; /* 左右对齐 */
     
     
   }
