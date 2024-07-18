@@ -13,8 +13,8 @@ export default {
 
 <template>
     <div class="headerShow">
-        <RouterLink to="/" class="routerItem">Home</RouterLink>
-        <RouterLink to="AboutView" class="routerItem">AboutView</RouterLink>
+        <RouterLink to="/" class="routerItem">HomePage</RouterLink>
+        <!-- <RouterLink to="AboutView" class="routerItem">AboutView</RouterLink> -->
     </div>
 </template>
 

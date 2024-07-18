@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 import AudioButton from '../components/AudioButton.vue'; // 导入 AudioButton
+import LoadingScreen from '../components/LoadingScreen.vue';
+
+const isLoading = ref(true);
+const loadProgress = ref(0);
+
 
 const currentTab = ref('tab1');
 
@@ -16,13 +21,30 @@ const audioResourceList = ref([
     { id: 'oioikawaii', src: '/sounds/oioikawaii.mp3', volume: 1.0 },
     { id: 'unmaxtutamaxtuta', src: '/sounds/unmaxtutamaxtuta.mp3', volume: 1.0 },
 
-
 ]);
+// 模擬資源加載進度
+const simulateLoading = () => {
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.random() * 10;
+    if (progress >= 100) {
+      clearInterval(interval);
+      isLoading.value = false;
+    }
+    loadProgress.value = progress;
+  }, 300); // 模擬每300毫秒更新一次進度
+};
+
+// 模擬資源加載
+simulateLoading();
+
 </script>
 
 
 
 <template>
+  <LoadingScreen v-if="isLoading" />
+  <div v-else>
   <div class="tabs">
       <button @click="currentTab = 'tab1'">Tab 1</button>
       <button @click="currentTab = 'tab2'">Tab 2</button>
@@ -32,7 +54,7 @@ const audioResourceList = ref([
   <!-- <div class="Container"> -->
     <div class="currentTabContainer">
     <div v-if="currentTab === 'tab1'" class="tab-content tab1">
-        <h2>周防有希</h2>
+        <h2>周防有希ボタン</h2>
         <AudioButton soundId="amasachikakun" label="あ、政近君 来てくださったのですね" :audioResourceList="audioResourceList" />
         <AudioButton soundId="tadanodearvenus" label="ただのDEAR VENUS？もうお兄ちゃんってば～ シ、ス、コ、ン🤍" :audioResourceList="audioResourceList" />
         <AudioButton soundId="baxtukayarou" label="ばっか野郎！実の兄弟だからいいんじゃねえか！" :audioResourceList="audioResourceList" />
@@ -42,7 +64,7 @@ const audioResourceList = ref([
         <AudioButton soundId="maxtuta-gomen" label="待ったーごめん～" :audioResourceList="audioResourceList" />
         <AudioButton soundId="tsurenaidesune" label="つれないですね、そこは『待った ごめん～』とおしゃってくださいな" :audioResourceList="audioResourceList" />
         <AudioButton soundId="oioikawaii" label="おいおい可愛い妹による寝起きボディプレスじゃねえか、喜べよ" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="unmaxtutamaxtuta" label="うん、待った 待った～" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="unmaxtutamaxtuta" label="うん🤍 待った 待った～" :audioResourceList="audioResourceList" />
         
 
       </div>
@@ -61,7 +83,7 @@ const audioResourceList = ref([
     </div>
     <img src="/pictures/001.png" alt="" class="pic01">
   <!-- </div> -->
-
+</div>
 </template>
 
 <style>
