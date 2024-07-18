@@ -1,16 +1,16 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+import AudioButton from '../components/AudioButton.vue'; // 导入 AudioButton
+
 
 const isLoading = ref(true);
 const loadProgress = ref(0);
 
-// onMounted(() => {
-//   // 模拟加载过程，可以用实际的资源加载逻辑替代
-//   setTimeout(() => {
-//     isLoading.value = false;
-//   }, 3000); // 3秒后隐藏加载画面
-// });
-// 模擬資源加載進度
+const audioResourceList = ref([
+    { id: 'unmaxtutamaxtuta', src: '/sounds/unmaxtutamaxtuta.mp3', volume: 1.0 },
+
+]);
+
 const simulateLoading = () => {
   let progress = 0;
   const interval = setInterval(() => {
@@ -30,6 +30,7 @@ simulateLoading();
 <template>
     <div class="loading-screen" v-if="isLoading">
         <img src="/pictures/003.gif" alt="Loading GIF" class="loading-gif" />
+        <AudioButton soundId="unmaxtutamaxtuta" label="うん🤍 待った 待った～" :audioResourceList="audioResourceList" />
       <p>Now Loading...</p>
     <div class="progress-bar">
       <div class="progress" :style="{ width: loadProgress + '%' }"></div>
