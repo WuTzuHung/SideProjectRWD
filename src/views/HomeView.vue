@@ -61,8 +61,8 @@ simulateLoading();
         <AudioButton soundId="mousyouganaina" label="もう しょうがないな～じゃあ今度はベッドの下に潜り込んでおいて、降りる瞬間に足つかんであげるね" :audioResourceList="audioResourceList" />
         <AudioButton soundId="guxtutomo-nin" label="グッドモーニン～マイブラザー" :audioResourceList="audioResourceList" />
         <AudioButton soundId="nandehannou" label="なんで？ 反応しちゃうからｗ？" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="maxtuta-gomen" label="待ったーごめん～" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="tsurenaidesune" label="つれないですね、そこは『待った ごめん～』とおしゃってくださいな" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="maxtuta-gomen" label="待ったー？ ごめん～" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="tsurenaidesune" label="つれないですね、そこは『待った？ ごめん～』とおしゃってくださいな" :audioResourceList="audioResourceList" />
         <AudioButton soundId="oioikawaii" label="おいおい可愛い妹による寝起きボディプレスじゃねえか、喜べよ" :audioResourceList="audioResourceList" />
         <AudioButton soundId="unmaxtutamaxtuta" label="うん🤍 待った 待った～" :audioResourceList="audioResourceList" />
         
