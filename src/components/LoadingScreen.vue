@@ -29,7 +29,7 @@ simulateLoading();
 
 <template>
     <div class="loading-screen" v-if="isLoading">
-        <img src="/pictures/003.gif" alt="Loading GIF" class="loading-gif" />
+        <img src="/pictures/004.gif" alt="Loading GIF" class="loading-gif" />
         <AudioButton soundId="unmaxtutamaxtuta" label="うん🤍 待った 待った～" :audioResourceList="audioResourceList" />
       <p>Now Loading...</p>
     <div class="progress-bar">
