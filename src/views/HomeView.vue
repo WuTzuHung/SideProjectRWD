@@ -148,14 +148,14 @@ simulateLoading();
 
 
 
-/* iPad: 576px - 767px */
+/* iPad: 768 - 1199px */
 @media (min-width: 768px) {
     .Container{
   background-color:yellow;
 }
 }
 
-/* PC: 1300px 以上 */
+/* PC: 1200px 以上 */
 @media (min-width: 1200px) {
     .Container {
         background-color: red; 
