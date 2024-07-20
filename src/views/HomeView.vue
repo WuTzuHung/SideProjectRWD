@@ -54,7 +54,7 @@ simulateLoading();
   <!-- <div class="Container"> -->
     <div class="currentTabContainer">
     <div v-if="currentTab === 'tab1'" class="tab-content tab1">
-        <h2>周防有希ボタン</h2>
+        <h1>周防有希ボタン</h1>
         <AudioButton soundId="amasachikakun" label="あ、政近君 来てくださったのですね" :audioResourceList="audioResourceList" />
         <AudioButton soundId="tadanodearvenus" label="ただのDEAR VENUS？もうお兄ちゃんってば～ シ、ス、コ、ン🤍" :audioResourceList="audioResourceList" />
         <AudioButton soundId="baxtukayarou" label="ばっか野郎！実の兄弟だからいいんじゃねえか！" :audioResourceList="audioResourceList" />

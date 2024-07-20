@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://suouyuki-btn.zeabur.app//sitemap.xml
