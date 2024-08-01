@@ -56,15 +56,15 @@ simulateLoading();
     <div v-if="currentTab === 'tab1'" class="tab-content tab1">
         <h1>周防有希ボタン</h1>
         <AudioButton soundId="amasachikakun" label="あ、政近君 来てくださったのですね" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="tadanodearvenus" label="ただのDEAR VENUS？もうお兄ちゃんってば～ シ、ス、コ、ン🤍" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="tadanodearvenus" label="ただのディア・ビーナス？も～お兄ちゃんってば～ シ・ス・コ・ン🤍" :audioResourceList="audioResourceList" />
         <AudioButton soundId="baxtukayarou" label="ばっか野郎！実の兄弟だからいいんじゃねえか！" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="mousyouganaina" label="もう しょうがないな～じゃあ今度はベッドの下に潜り込んでおいて、降りる瞬間に足つかんであげるね" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="guxtutomo-nin" label="グッドモーニン～マイブラザー" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="mousyouganaina" label="むぅ… しょ～がないなあ～じゃあ今度はベッドの下に潜り込んでおいて、降りた瞬間に足掴んであげるね？" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="guxtutomo-nin" label="グッドモーニ～ン、マイブラザ～" :audioResourceList="audioResourceList" />
         <AudioButton soundId="nandehannou" label="なんで？ 反応しちゃうからｗ？" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="maxtuta-gomen" label="待ったー？ ごめん～" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="tsurenaidesune" label="つれないですね、そこは『待った？ ごめん～』とおしゃってくださいな" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="oioikawaii" label="おいおい可愛い妹による寝起きボディプレスじゃねえか、喜べよ" :audioResourceList="audioResourceList" />
-        <AudioButton soundId="unmaxtutamaxtuta" label="うん🤍 待った 待った～" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="maxtuta-gomen" label="まったぁ？ごめぇ〜ん" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="tsurenaidesune" label="つれないですね、そこは『待った？ ごめぇ〜ん』とおしゃってくださいな" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="oioikawaii" label="おいおい 可愛い妹による寝起きボディープレスじゃねえか、喜べよ" :audioResourceList="audioResourceList" />
+        <AudioButton soundId="unmaxtutamaxtuta" label="うん！ 待った待った～♪" :audioResourceList="audioResourceList" />
         
 
       </div>
