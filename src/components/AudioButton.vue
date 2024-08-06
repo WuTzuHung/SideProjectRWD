@@ -84,8 +84,8 @@ button {
   cursor: pointer;
   border-radius: 10px;
   border: 1px solid black;
-  border-right-width: 2.5px; 
-  border-bottom-width: 2.5px; 
+  border-right-width: 4px; 
+  border-bottom-width: 4px; 
   border-left-width: 0px; 
   border-top-width: 0px; 
   background-color: rgb(245, 97, 122);
