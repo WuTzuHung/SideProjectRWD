@@ -86,6 +86,8 @@ button {
   border: 1px solid black;
   border-right-width: 2.5px; 
   border-bottom-width: 2.5px; 
+  border-left-width: 0px; 
+  border-top-width: 0px; 
   background-color: rgb(245, 97, 122);
   color: white;
   font-family: 'Noto Sans JP', sans-serif;
