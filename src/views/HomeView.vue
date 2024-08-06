@@ -90,6 +90,7 @@ simulateLoading();
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  background-color: rgba(182, 180, 177, 0.25);
 }
 
 /* .Head1{
@@ -116,36 +117,39 @@ body {
 
   .tab-content {
     box-sizing: border-box; /* 包含內邊距與邊框 */
-    width: 80%;
+    width: 90%;
     min-height: 60dvh;
     padding: 0.1px;
     margin: 0%;
+  border: 1px solid pink;
+  border-radius: 10PX;
+
   /* border: 1px solid #121111;  */
   /* border-radius: 8px;  */
   /* margin-top: 10px;  */
 }
 
 .pic01{
-    max-width: 80%; /* 限制最大寬度 */
+    max-width: 90%; /* 限制最大寬度 */
     min-height: 10dvh;    /* 自動調整高度 */
   }
 
 .tab1 {
-  background-color: #8cea18; 
+  background-color: white; 
 
   
 }
 
 .tab2 {
-  background-color: #09bcd3; 
+  background-color: white; 
 }
 
 .tab3 {
-  background-color: #ea960d; 
+  background-color: white;
 }
 
 .tab4 {
-  background-color: #99129e; 
+  background-color: white;
 }
 
 /* } */
@@ -171,7 +175,7 @@ body {
 
     .pic01{
     max-width: 40%; /* 限制最大寬度 */
-    min-height: 50dvh;    /* 自動調整高度 */
+    min-height: 40dvh;    /* 自動調整高度 */
   }
 
   

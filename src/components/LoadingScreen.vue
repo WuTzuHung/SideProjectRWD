@@ -77,6 +77,7 @@ body {
 .loading-gif{
     /* watch:30%; */
     height: 30dvh;
+    margin-bottom: 2dvh;
 }
 
 p {
