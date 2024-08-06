@@ -88,6 +88,10 @@ simulateLoading();
 
 <style>
 
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 /* .Head1{
   width: 100%;
   height: 15dvh;
@@ -123,7 +127,7 @@ simulateLoading();
 
 .pic01{
     max-width: 80%; /* 限制最大寬度 */
-    min-height: 30dvh;    /* 自動調整高度 */
+    min-height: 10dvh;    /* 自動調整高度 */
   }
 
 .tab1 {

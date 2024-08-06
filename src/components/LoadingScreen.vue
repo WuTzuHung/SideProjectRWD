@@ -40,6 +40,11 @@ simulateLoading();
 
 
 <style scoped>
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .loading-screen {
   position: fixed;
   top: 0;

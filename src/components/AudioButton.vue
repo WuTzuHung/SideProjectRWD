@@ -76,10 +76,19 @@ const handleButtonClick = () => {
 </template>
 
 <style scoped>
+
 button {
   padding: 10px 20px;
   margin: 5px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-right-width: 2.5px; 
+  border-bottom-width: 2.5px; 
+  background-color: rgb(245, 97, 122);
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
 }
+
 </style>
