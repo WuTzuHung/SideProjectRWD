@@ -1,3 +1,18 @@
 User-agent: *
 Disallow:
-Sitemap: https://suouyuki-btn.zeabur.app//sitemap.xml
+Sitemap: https://suouyuki-btn.zeabur.app/sitemap.xml
+
+# 允许所有网络爬虫索引CSS和JS文件，以提高SEO
+User-agent: *
+Allow: /css/
+Allow: /js/
+
+# 针对特定网络爬虫的指令
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
