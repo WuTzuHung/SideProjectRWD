@@ -92,7 +92,7 @@ button {
   background-color: rgb(245, 97, 122);
   color: white;
   font-family: 'Noto Sans JP', sans-serif;
-  box-shadow: 0 9px rgba(139, 0, 0, 0.4);
+  box-shadow: 0 9px #bd4646;
 }
 
 .button:hover {background-color: rgb(244, 70, 99)}
