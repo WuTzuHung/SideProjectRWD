@@ -72,25 +72,35 @@ const handleButtonClick = () => {
 </script>
 
 <template>
-  <button @click="handleButtonClick">{{ label }}</button>
+  <button class="button" @click="handleButtonClick">{{ label }}</button>
 </template>
 
 <style scoped>
 
 button {
   padding: 10px 20px;
-  margin: 5px;
+  margin: 5px 10px 15px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black;
   border-right-width: 4px; 
   border-bottom-width: 4px; 
   border-left-width: 0px; 
-  border-top-width: 0px; 
+  border-top-width: 0px;  */
+  border-width: 0px;
   background-color: rgb(245, 97, 122);
   color: white;
   font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 9px rgba(139, 0, 0, 0.4);
+}
+
+.button:hover {background-color: rgb(244, 70, 99)}
+
+.button:active {
+  background-color: rgb(244, 70, 99);
+  box-shadow: 0 5px #bd4646;
+  transform: translateY(4px);
 }
 
 </style>
