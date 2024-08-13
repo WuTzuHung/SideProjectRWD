@@ -1,10 +1,28 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, provide } from 'vue';
 import AudioButton from '../components/AudioButton.vue'; // 导入 AudioButton
 import LoadingScreen from '../components/LoadingScreen.vue';
 
 const isLoading = ref(true);
 const loadProgress = ref(0);
+
+// 当前播放的音频
+const currentAudio = ref(null);
+
+// 停止当前音频
+const stopCurrentAudio = () => {
+  if (currentAudio.value) {
+    currentAudio.value.pause();
+    currentAudio.value.currentTime = 0;
+    currentAudio.value = null;
+  }
+};
+
+// 提供全局的音频管理器
+provide('audioManager', {
+  currentAudio,
+  stopCurrentAudio
+});
 
 
 const currentTab = ref('tab1');
