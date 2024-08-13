@@ -46,10 +46,10 @@ simulateLoading();
   <LoadingScreen v-if="isLoading" />
   <div v-else>
   <div class="tabs">
-      <button @click="currentTab = 'tab1'">Tab 1</button>
-      <button @click="currentTab = 'tab2'">Tab 2</button>
-      <button @click="currentTab = 'tab3'">Tab 3</button>
-      <button @click="currentTab = 'tab4'">Tab 4</button>
+      <button @click="currentTab = 'tab1'">第2話</button>
+      <button @click="currentTab = 'tab2'">第3話</button>
+      <button @click="currentTab = 'tab3'">第4話</button>
+      <button @click="currentTab = 'tab4'">第5話</button>
     </div>
   <!-- <div class="Container"> -->
     <div class="currentTabContainer">
@@ -69,15 +69,15 @@ simulateLoading();
 
       </div>
       <div v-if="currentTab === 'tab2'" class="tab-content tab2">
-        <h2>Tab 2 Content</h2>
+        <h1>周防有希ボタン</h1>
         
       </div>
       <div v-if="currentTab === 'tab3'" class="tab-content tab3">
-        <h2>Tab 3 Content</h2>
+        <h1>周防有希ボタン</h1>
 
       </div>
       <div v-if="currentTab === 'tab4'" class="tab-content tab4">
-        <h2>Tab 4 Content</h2>
+        <h1>周防有希ボタン</h1>
 
       </div>
     </div>

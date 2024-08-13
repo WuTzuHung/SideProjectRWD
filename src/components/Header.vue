@@ -13,7 +13,7 @@ export default {
 
 <template>
     <div class="headerShow">
-        <RouterLink to="/" class="routerItem">HomePage</RouterLink>
+        <RouterLink to="/" class="routerItem">周防有希ボタン</RouterLink>
         <!-- <RouterLink to="AboutView" class="routerItem">AboutView</RouterLink> -->
     </div>
 </template>
@@ -35,21 +35,21 @@ export default {
     }
 
     a {
-        margin-right: 20px;
+        // margin-right: 20px;
         padding-top: 5dvh;
 
-        &:hover {
-            border-radius: 10px;
-            background-color: rgba(129, 255, 196, 0.27);
-            font-size: 40px;
-            color: black;
-            box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.2);
-        }
+        // &:hover {
+        //     border-radius: 10px;
+        //     background-color: rgba(129, 255, 196, 0.27);
+        //     font-size: 40px;
+        //     color: black;
+        //     box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.2);
+        // }
 
-        &:active {
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.344);
-        }
+        // &:active {
+        //     border-radius: 10px;
+        //     background-color: rgba(0, 0, 0, 0.344);
+        // }
     }
 }
 </style>
