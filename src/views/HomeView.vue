@@ -142,6 +142,10 @@ body {
   transform: translateY(4px);
 } 
 
+.tabs{
+  margin-top: 10dvh;
+}
+
   .currentTabContainer{
     display: flex; /* 使用 Flexbox */
     justify-content: center; /* 左右对齐 */
@@ -201,6 +205,10 @@ body {
 @media (min-width: 1200px) {
     .Container {
         background-color: red; 
+    }
+
+    .tabs{
+      margin-top: 23dvh;
     }
 
     .tab-content{
