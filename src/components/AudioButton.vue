@@ -16,7 +16,7 @@ const props = defineProps({
   }
 });
 
-// Injecting the global audio manager
+// 注入全域音效管理器
 const audioManager = inject('audioManager');
 const isPlaying = ref(false);
 
@@ -24,22 +24,22 @@ const playAudio = () => {
   const audioResource = props.audioResourceList.find(resource => resource.id === props.soundId);
   if (audioResource) {
     if (audioManager.currentAudio.value) {
-      // Check if the currently playing audio is the same as the new audio
+      // 檢查當前播放的音效是否與新的音效相同
       if (audioManager.currentAudio.value.src !== audioResource.src) {
-        audioManager.stopCurrentAudio(); // Stop the currently playing audio if different
+        audioManager.stopCurrentAudio(); // 如果不同，停止目前播放的音效
       } else {
-        // Restart the same audio if it's already playing
-        audioManager.currentAudio.value.currentTime = 0; // Reset to the beginning
-        audioManager.currentAudio.value.play(); // Play again
-        return; // Exit playAudio to avoid creating a new Audio instance
+        // 如果相同，重新開始播放音效
+        audioManager.currentAudio.value.currentTime = 0; // 重置到開始
+        audioManager.currentAudio.value.play(); // 再次播放
+        return; // 退出 playAudio，避免創建新的 Audio 實例
       }
     }
 
-    // Create a new Audio instance
+    // 創建新的 Audio 實例
     const newAudio = new Audio(audioResource.src);
     newAudio.volume = audioResource.volume;
 
-    // Update the global audio manager
+    // 更新全域音效管理器
     audioManager.currentAudio.value = newAudio;
 
     newAudio.play();
@@ -53,11 +53,11 @@ const playAudio = () => {
 
 const handleButtonClick = () => {
   if (isPlaying.value && audioManager.currentAudio.value && audioManager.currentAudio.value.src === props.audioResourceList.find(resource => resource.id === props.soundId).src) {
-    // If the same audio is already playing, reset and play again
-    audioManager.currentAudio.value.currentTime = 0; // Reset to the beginning
-    audioManager.currentAudio.value.play(); // Play again
+    // 如果相同的音效已經在播放，重置並再次播放
+    audioManager.currentAudio.value.currentTime = 0; // 重置到開始
+    audioManager.currentAudio.value.play(); // 再次播放
   } else {
-    // If not playing or different audio, play the new audio
+    // 如果沒有播放或不同的音效，播放新的音效
     playAudio();
   }
 };

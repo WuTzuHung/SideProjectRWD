@@ -1,15 +1,15 @@
 <script setup>
 import { ref, provide } from 'vue';
-import AudioButton from '../components/AudioButton.vue'; // 导入 AudioButton
+import AudioButton from '../components/AudioButton.vue'; 
 import LoadingScreen from '../components/LoadingScreen.vue';
 
 const isLoading = ref(true);
 const loadProgress = ref(0);
 
-// 当前播放的音频
+// 當前播放的音頻
 const currentAudio = ref(null);
 
-// 停止当前音频
+// 停止當前音頻
 const stopCurrentAudio = () => {
   if (currentAudio.value) {
     currentAudio.value.pause();
@@ -18,15 +18,15 @@ const stopCurrentAudio = () => {
   }
 };
 
-// 提供全局的音频管理器
+// 提供全局的音頻管理器
 provide('audioManager', {
   currentAudio,
   stopCurrentAudio
 });
 
-// 供按钮使用的停止所有音频的方法
+// 供按鈕使用的停止所有音頻的方法
 const stopAllAudio = () => {
-  stopCurrentAudio();  // 直接调用 stopCurrentAudio 方法
+  stopCurrentAudio();  // 直接調用 stopCurrentAudio 方法
 };
 
 
