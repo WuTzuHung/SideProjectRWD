@@ -75,11 +75,6 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
-  /* border: 1px solid black;
-  border-right-width: 4px; 
-  border-bottom-width: 4px; 
-  border-left-width: 0px; 
-  border-top-width: 0px;  */
   border-width: 0px;
   background-color: rgb(245, 97, 122);
   color: white;

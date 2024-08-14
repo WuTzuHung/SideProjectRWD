@@ -24,6 +24,11 @@ provide('audioManager', {
   stopCurrentAudio
 });
 
+// 供按钮使用的停止所有音频的方法
+const stopAllAudio = () => {
+  stopCurrentAudio();  // 直接调用 stopCurrentAudio 方法
+};
+
 
 const currentTab = ref('tab1');
 
@@ -99,6 +104,7 @@ simulateLoading();
 
       </div>
     </div>
+    <button class="stop" @click="stopAllAudio">ストップ</button>
     <img src="/pictures/001.png" alt="" class="pic01">
   <!-- </div> -->
 </div>
@@ -111,20 +117,30 @@ body {
   background-color: rgba(182, 180, 177, 0.25);
 }
 
-/* .Head1{
-  width: 100%;
-  height: 15dvh;
-  background-color: blueviolet;
-} */
+ .stop {
+  position: fixed;
+  bottom:2dvh;
+  right: 0%;
+  z-index: 1000;
+  padding: 5px 10px;
+  margin: 5px 10px 15px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-width: 0px;
+  background-color: rgb(51, 204, 153); 
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 9px rgb(34, 142, 99); 
+}
 
-/* .Container{
-  width: 100%;
-  height: 85dvh;
-  background-color: purple; */
+.stop:hover {background-color: #36b68d}
 
-  /* .button{
-    height: 5dvh;
-  } */
+.stop:active {
+  background-color: #36b68d;
+  box-shadow: 0 5px rgb(34, 142, 99);
+  transform: translateY(4px);
+} 
 
   .currentTabContainer{
     display: flex; /* 使用 Flexbox */
@@ -194,6 +210,14 @@ body {
     .pic01{
     max-width: 40%; /* 限制最大寬度 */
     min-height: 40dvh;    /* 自動調整高度 */
+  }
+
+  .stop{
+  bottom:3dvh;
+  right: 3%;
+  padding: 10px 20px;
+  font-size: 16px;
+
   }
 
   
