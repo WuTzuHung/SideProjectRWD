@@ -77,7 +77,7 @@ simulateLoading();
   <!-- <div class="Container"> -->
     <div class="currentTabContainer">
     <div v-if="currentTab === 'tab1'" class="tab-content tab1">
-        <h1>周防有希ボタン</h1>
+        <h1 class="suouyikiButton">周防有希ボタン</h1>
         <AudioButton soundId="amasachikakun" label="あ、政近君 来てくださったのですね" :audioResourceList="audioResourceList" />
         <AudioButton soundId="tadanodearvenus" label="ただのディア・ビーナス？も～お兄ちゃんってば～ シ・ス・コ・ン🤍" :audioResourceList="audioResourceList" />
         <AudioButton soundId="baxtukayarou" label="ばっか野郎！実の兄弟だからいいんじゃねえか！" :audioResourceList="audioResourceList" />
@@ -92,15 +92,15 @@ simulateLoading();
 
       </div>
       <div v-if="currentTab === 'tab2'" class="tab-content tab2">
-        <h1>周防有希ボタン</h1>
+        <h1 class="suouyikiButton">周防有希ボタン</h1>
         
       </div>
       <div v-if="currentTab === 'tab3'" class="tab-content tab3">
-        <h1>周防有希ボタン</h1>
+        <h1 class="suouyikiButton">周防有希ボタン</h1>
 
       </div>
       <div v-if="currentTab === 'tab4'" class="tab-content tab4">
-        <h1>周防有希ボタン</h1>
+        <h1 class="suouyikiButton">周防有希ボタン</h1>
 
       </div>
     </div>
@@ -113,8 +113,12 @@ simulateLoading();
 <style>
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  /* font-family: 'Noto Sans JP', sans-serif; */
   background-color: rgba(182, 180, 177, 0.25);
+}
+
+.suouyikiButton{
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
  .stop {
