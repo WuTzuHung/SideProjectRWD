@@ -25,15 +25,28 @@ export default {
 
 <style scoped lang="scss">
 
-.title_JP, .title_EN {
+.title_JP {
     margin: 0 auto 0.3rem auto;
     margin-top: 5dvh;
     display: flex;
     justify-content: center;
     align-content:center;
-        font-family: 'Press Start 2P', 'keifontregular', 'Kosugi Maru', cursive;
+        font-family: 'Press Start 2P', 'Kosugi Maru', cursive;
         color: rgba(246, 75, 95, 0.992);
         font-size: 3rem;
+        text-decoration: none;
+        text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .title_EN{
+    margin: 0 auto 0.3rem auto;
+    margin-top: 5dvh;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+        font-family: 'Press Start 2P', 'Kosugi Maru', cursive;
+        color: rgba(246, 75, 95, 0.992);
+        font-size: 1.5rem;
         text-decoration: none;
         text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
     }
@@ -73,9 +86,15 @@ export default {
 /* PC: 1200px 以上 */
 @media (min-width: 1200px) {
 
-    .title_JP, .title_EN {
+    .title_JP {
         margin-top: 5.5dvh;
         font-size: 5rem;
+        
+    }
+    
+    .title_EN {
+        margin-top: 5.5dvh;
+        font-size: 3rem;
         
     }
 

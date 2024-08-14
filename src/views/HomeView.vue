@@ -147,7 +147,7 @@ body {
 } 
 
 .tabs{
-  margin-top: 10dvh;
+  margin-top: 7dvh;
 }
 
   .currentTabContainer{
@@ -212,7 +212,7 @@ body {
     }
 
     .tabs{
-      margin-top: 23dvh;
+      margin-top: 20dvh;
     }
 
     .tab-content{
