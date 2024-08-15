@@ -69,15 +69,43 @@ simulateLoading();
   <LoadingScreen v-if="isLoading" />
   <div v-else>
   <div class="tabs">
-      <button @click="currentTab = 'tab1'">第2話</button>
-      <button @click="currentTab = 'tab2'">第3話</button>
-      <button @click="currentTab = 'tab3'">第4話</button>
-      <button @click="currentTab = 'tab4'">第5話</button>
+    <button
+        class="tabsButton"
+        :class="{ active: currentTab === 'tab1' }"
+        @click="currentTab = 'tab1'"
+      >
+        第2話
+      </button>
+      <button
+        class="tabsButton"
+        :class="{ active: currentTab === 'tab2' }"
+        @click="currentTab = 'tab2'"
+      >
+        第3話
+      </button>
+      <button
+        class="tabsButton"
+        :class="{ active: currentTab === 'tab3' }"
+        @click="currentTab = 'tab3'"
+      >
+        第4話
+      </button>
+      <button
+        class="tabsButton"
+        :class="{ active: currentTab === 'tab4' }"
+        @click="currentTab = 'tab4'"
+      >
+        第5話
+      </button>
     </div>
   <!-- <div class="Container"> -->
     <div class="currentTabContainer">
-    <div v-if="currentTab === 'tab1'" class="tab-content tab1">
-        <h1 class="suouyikiButton">周防有希ボタン</h1>
+      <div 
+      v-if="currentTab === 'tab1'" 
+      class="tab-content tab1"
+      :class="{ 'no-top-border': currentTab === 'tab1' }"
+    >
+        <h1 class="suouyikiButton">周防有希ボタン2</h1>
         <AudioButton soundId="amasachikakun" label="あ、政近君 来てくださったのですね" :audioResourceList="audioResourceList" />
         <AudioButton soundId="tadanodearvenus" label="ただのディア・ビーナス？も～お兄ちゃんってば～ シ・ス・コ・ン🤍" :audioResourceList="audioResourceList" />
         <AudioButton soundId="baxtukayarou" label="ばっか野郎！実の兄弟だからいいんじゃねえか！" :audioResourceList="audioResourceList" />
@@ -91,16 +119,28 @@ simulateLoading();
         
 
       </div>
-      <div v-if="currentTab === 'tab2'" class="tab-content tab2">
-        <h1 class="suouyikiButton">周防有希ボタン</h1>
+      <div 
+      v-if="currentTab === 'tab2'" 
+      class="tab-content tab2"
+      :class="{ 'no-top-border': currentTab === 'tab2' }"
+    >
+        <h1 class="suouyikiButton">周防有希ボタン3</h1>
         
       </div>
-      <div v-if="currentTab === 'tab3'" class="tab-content tab3">
-        <h1 class="suouyikiButton">周防有希ボタン</h1>
+      <div 
+      v-if="currentTab === 'tab3'" 
+      class="tab-content tab3"
+      :class="{ 'no-top-border': currentTab === 'tab3' }"
+    >
+        <h1 class="suouyikiButton">周防有希ボタン4</h1>
 
       </div>
-      <div v-if="currentTab === 'tab4'" class="tab-content tab4">
-        <h1 class="suouyikiButton">周防有希ボタン</h1>
+      <div 
+      v-if="currentTab === 'tab4'" 
+      class="tab-content tab4"
+      :class="{ 'no-top-border': currentTab === 'tab4' }"
+    >
+        <h1 class="suouyikiButton">周防有希ボタン5</h1>
 
       </div>
     </div>
@@ -147,7 +187,26 @@ body {
 } 
 
 .tabs{
+  width: 80%;
   margin-top: 7dvh;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabsButton{
+  cursor: pointer;
+  font-size: 13pt;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: pink;
+  border: 1px solid pink;
+  border-bottom: none;
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px; 
+}
+
+.tabsButton.active{
+  background-color: white;
 }
 
   .currentTabContainer{
@@ -164,11 +223,15 @@ body {
     padding: 0.1px;
     margin: 0%;
   border: 1px solid pink;
-  border-radius: 10PX;
+  border-radius: 10px;
 
   /* border: 1px solid #121111;  */
   /* border-radius: 8px;  */
   /* margin-top: 10px;  */
+}
+
+.tab-content.no-top-border {
+  border-top: none; /* 移除上邊框 */
 }
 
 .pic01{
@@ -213,6 +276,12 @@ body {
 
     .tabs{
       margin-top: 20dvh;
+    }
+
+    .tabsButton{
+      font-size: 15pt;
+      width: 18%;
+      height: 6dvh;
     }
 
     .tab-content{
